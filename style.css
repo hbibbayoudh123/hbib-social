@@ -1,41 +1,113 @@
-body{
-    margin: 0;
-    font-family: Arial;
-    background: radial-gradient(circle,#0a0a0a,#000);
-    color: white;
-    text-align: center;
-}
-h1{
-    margin-top: 30px;
-    font-size: 40px;
-    background: linear-gradient(90deg,#00f,#0ff,#f0f);
-    -webkit-background-clip: text;
-    color: transparent;
-}
-.grid{
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    margin-top: 50px;
-    flex-wrap: wrap;
-}
-.box{
-    background: #111;
-    padding: 20px;
-    border-radius: 20px;
-    width: 220px;
-    transition: 0.3s;
-    box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
-}
-.box:hover{
-    transform: scale(1.05);
-    box-shadow: 0 0 30px rgba(0, 255, 255, 0.8);
-}
-.box img{
-    width: 100%;
-    border-radius: 15px;
-}
-.name{
-    margin-top: 10px;
-    font-size: 20px;
-}
+/* RESET */  
+* {  
+    margin: 0;  
+    padding: 0;  
+    box-sizing: border-box;  
+}  
+  
+/* BODY */  
+body {  
+    font-family: Arial, sans-serif;  
+    background: linear-gradient(-45deg, #020617, #0f172a, #1e293b, #020617);  
+    background-size: 400% 400%;  
+    animation: gradientMove 12s ease infinite;  
+    color: white;  
+    text-align: center;  
+    min-height: 100vh;  
+    display: flex;  
+    justify-content: center;  
+    align-items: center;  
+    }
+    @keyframes gradientMove {  
+    0% { background-position: 0% 50%; }  
+    50% { background-position: 100% 50%; }  
+    100% { background-position: 0% 50%; }  
+    }
+  
+/* CONTAINER */  
+.container {  
+    width: 100%;  
+    max-width: 400px;  
+    padding: 20px;  
+}  
+  
+/* LOGO */  
+.logo {  
+    width: 110px;  
+    max-width: 80%;  
+    border-radius: 50%;  
+    margin-bottom: 15px;  
+    box-shadow: 0 0 20px #00f0ff, 0 0 40px #ff00ff;  
+    animation: pulse 2s infinite;  
+}  
+  
+/* ANIMATION */  
+@keyframes pulse {  
+    0% { transform: scale(1); }  
+    50% { transform: scale(1.08); }  
+    100% { transform: scale(1); }  
+}  
+  
+/* TITLE */  
+h1 {  
+    font-size: 36px;  
+    margin-bottom: 10px;  
+    background: linear-gradient(90deg, #00f0ff, #ff00ff);  
+    -webkit-background-clip: text;  
+    -webkit-text-fill-color: transparent;  
+}  
+  
+/* TEXT */  
+p {  
+    color: #aaa;  
+    margin-bottom: 25px;  
+}  
+  
+/* BUTTON BASE */  
+.btn {  
+    display: block;  
+    width: 100%;  
+    padding: 15px;  
+    margin: 12px 0;  
+    border-radius: 30px;  
+    text-decoration: none;  
+    color: white;  
+    font-size: 18px;  
+    transition: 0.3s;  
+}  
+  
+/* INSTAGRAM */  
+.insta {  
+    border: 2px solid #ff00ff;  
+    box-shadow: 0 0 10px #ff00ff;  
+}  
+  
+/* TIKTOK */  
+.tiktok {  
+    border: 2px solid #00f0ff;  
+    box-shadow: 0 0 10px #00f0ff;  
+}  
+  
+/* SNAPCHAT */  
+.snap {  
+    border: 2px solid yellow;  
+    box-shadow: 0 0 10px yellow;  
+}  
+  
+/* HOVER */  
+.btn:hover {  
+    transform: scale(1.08);  
+    box-shadow: 0 0 25px white;  
+}  
+  
+/* MOBILE */  
+@media (max-width: 500px) {  
+    h1 {  
+        font-size: 28px;  
+    }  
+  
+    .btn {  
+        font-size: 16px;  
+        padding: 12px;  
+    }  
+}  
